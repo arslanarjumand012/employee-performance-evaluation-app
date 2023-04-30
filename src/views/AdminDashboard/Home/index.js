@@ -1,6 +1,6 @@
-import React from "react";
-import Layout from "../../../layout";
-import { APP_ROLES, URL } from "../../../constants";
+import React from 'react';
+import Layout from '../../../layout';
+import { APP_ROLES, URL } from '../../../constants';
 
 const AdminDashboardHome = () => {
   return (

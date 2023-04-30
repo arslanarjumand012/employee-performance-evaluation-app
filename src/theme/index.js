@@ -1,5 +1,5 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import { LOCAL_STORAGE_KEY, THEME_MODE } from "../constants";
+import { createContext, useContext, useEffect, useState } from 'react';
+import { LOCAL_STORAGE_KEY, THEME_MODE } from '../constants';
 
 const ThemeContext = createContext();
 
@@ -13,16 +13,10 @@ export const ThemeProvider = ({ children }) => {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) =>
-      prevTheme === THEME_MODE.LIGHT ? THEME_MODE.DARK : THEME_MODE.LIGHT
-    );
+    setTheme((prevTheme) => (prevTheme === THEME_MODE.LIGHT ? THEME_MODE.DARK : THEME_MODE.LIGHT));
   };
 
-  return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
 };
 
 export const useTheme = () => useContext(ThemeContext);

@@ -1,5 +1,5 @@
-import React from "react";
-import { ToastContainer, Zoom } from "react-toastify";
+import React from 'react';
+import { ToastContainer, Zoom } from 'react-toastify';
 
 const Toaster = () => {
   return (

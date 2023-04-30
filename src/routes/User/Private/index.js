@@ -1,11 +1,11 @@
-import React from "react";
-import { Outlet, Navigate } from "react-router-dom";
-import { URL } from "../../../constants";
+import React from 'react';
+import { Outlet, Navigate } from 'react-router-dom';
+import { URL } from '../../../constants';
 
 const UserPrivateRoutes = () => {
   const authenticated = true;
   const isAdmin = false;
-  const token = "token";
+  const token = 'token';
 
   return authenticated && !isAdmin ? (
     <Outlet />

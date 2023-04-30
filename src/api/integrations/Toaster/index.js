@@ -1,9 +1,7 @@
-import React, { lazy } from "react";
-import { toast } from "react-toastify";
+import React, { lazy } from 'react';
+import { toast } from 'react-toastify';
 
-const ToastNotification = lazy(() =>
-  import("../../../components/ToastNotification")
-);
+const ToastNotification = lazy(() => import('../../../components/ToastNotification'));
 
 export const toastError = (message) => {
   return toast.error(<ToastNotification message={message} />);

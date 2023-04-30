@@ -1,6 +1,6 @@
-import React from "react";
-import { Outlet, Navigate } from "react-router-dom";
-import { URL } from "../../../constants";
+import React from 'react';
+import { Outlet, Navigate } from 'react-router-dom';
+import { URL } from '../../../constants';
 
 const UserPublicRoutes = () => {
   const authenticated = true;

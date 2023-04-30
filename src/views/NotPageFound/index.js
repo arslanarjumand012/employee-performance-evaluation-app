@@ -1,16 +1,16 @@
-import React, { lazy } from "react";
-import { useTheme } from "../../theme";
-import { THEME_MODE, URL } from "../../constants";
-import { useNavigate } from "react-router-dom";
+import React, { lazy } from 'react';
+import { useTheme } from '../../theme';
+import { THEME_MODE, URL } from '../../constants';
+import { useNavigate } from 'react-router-dom';
 
-const DarkModeSwitch = lazy(() => import("../../components/DarkModeSwitch"));
+const DarkModeSwitch = lazy(() => import('../../components/DarkModeSwitch'));
 
 const NotPageFound = () => {
   const { theme } = useTheme();
   const navigate = useNavigate();
 
   return (
-    <section className={theme === THEME_MODE.DARK ? "bg-gray-900" : "bg-white"}>
+    <section className={theme === THEME_MODE.DARK ? 'bg-gray-900' : 'bg-white'}>
       <div className="absolute top-10 right-10">
         <DarkModeSwitch />
       </div>
@@ -19,8 +19,8 @@ const NotPageFound = () => {
           <p
             className={
               theme === THEME_MODE.DARK
-                ? "p-3 text-sm font-medium text-indigo-600 rounded-full bg-gray-800"
-                : "p-3 text-sm font-medium text-indigo-600 rounded-full bg-blue-50"
+                ? 'p-3 text-sm font-medium text-indigo-600 rounded-full bg-gray-800'
+                : 'p-3 text-sm font-medium text-indigo-600 rounded-full bg-blue-50'
             }
           >
             <svg
@@ -41,21 +41,14 @@ const NotPageFound = () => {
           <h1
             className={
               theme === THEME_MODE.DARK
-                ? "mt-3 text-2xl font-semibold text-white md:text-3xl"
-                : "mt-3 text-2xl font-semibold text-gray-800 md:text-3xl"
+                ? 'mt-3 text-2xl font-semibold text-white md:text-3xl'
+                : 'mt-3 text-2xl font-semibold text-gray-800 md:text-3xl'
             }
           >
             Page not found
           </h1>
-          <p
-            className={
-              theme === THEME_MODE.DARK
-                ? "mt-4 text-gray-400"
-                : "mt-4 text-gray-500"
-            }
-          >
-            The page you are looking for doesn't exist. Here are some helpful
-            links:
+          <p className={theme === THEME_MODE.DARK ? 'mt-4 text-gray-400' : 'mt-4 text-gray-500'}>
+            The page you are looking for doesn't exist. Here are some helpful links:
           </p>
 
           <div className="flex items-center w-full mt-6 gap-x-3 shrink-0 sm:w-auto">
